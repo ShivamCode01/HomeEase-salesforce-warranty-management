@@ -3,6 +3,15 @@
     <fullName>Warranty__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <label>Warranty</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Warranty__c.Product__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Product__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>Warranty__c</referenceTo>
     <relationshipLabel>Repair Requests</relationshipLabel>
     <relationshipName>Repair_Requests</relationshipName>
