@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Repair_StatusRequiresTechnician</fullName>
+    <active>true</active>
+    <description>Prevents dispatches from bypassing technician allocation rules when updating the ticket lifecycle status.</description>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Repair_Status__c,&quot;On Hold&quot;),
+ISPICKVAL(Repair_Status__c,&quot;In Progress&quot;),
+ISPICKVAL(Repair_Status__c,&quot;Resolved&quot;),
+ISPICKVAL(Repair_Status__c,&quot;Closed&quot;)
+),
+ISBLANK(Technician__c)
+)</errorConditionFormula>
+    <errorMessage>An active Technician must be assigned to the Repair Request before status can be advanced to In Progress ,on hold, resolved or Closed.</errorMessage>
+</ValidationRule>
