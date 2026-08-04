@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Repair_Status__c</fullName>
-    <label>Repair Status</label>
+    <fullName>Repair_Outcome__c</fullName>
+    <label>Repair Outcome</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
@@ -11,34 +11,24 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>New</fullName>
-                <default>true</default>
-                <label>New</label>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+                <label>Fixed</label>
             </value>
             <value>
-                <fullName>In Progress</fullName>
+                <fullName>Replaced</fullName>
                 <default>false</default>
-                <label>In Progress</label>
+                <label>Replaced</label>
             </value>
             <value>
-                <fullName>On Hold</fullName>
+                <fullName>No Fault Found</fullName>
                 <default>false</default>
-                <label>On Hold</label>
+                <label>No Fault Found</label>
             </value>
             <value>
-                <fullName>Resolved</fullName>
+                <fullName>Customer Cancelled</fullName>
                 <default>false</default>
-                <label>Resolved</label>
-            </value>
-            <value>
-                <fullName>Closed</fullName>
-                <default>false</default>
-                <label>Closed</label>
-            </value>
-            <value>
-                <fullName>Assigned</fullName>
-                <default>false</default>
-                <label>Assigned</label>
+                <label>Customer Cancelled</label>
             </value>
         </valueSetDefinition>
     </valueSet>
